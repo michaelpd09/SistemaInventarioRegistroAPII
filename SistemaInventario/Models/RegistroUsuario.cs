@@ -19,10 +19,12 @@ namespace SistemaInventario.Models
         [DataType(DataType.PhoneNumber, ErrorMessage = "Telefono Obligatorio")]
         public long Telefono { get; set; }
 
-        [Required(ErrorMessage = "Clave Obligatoria")]
+        [Required(ErrorMessage = "La Clave es Obligatorio")]
+        [DataType(DataType.Password)]
         public string Clave { get; set; }
 
-        [Compare("Clave",ErrorMessage = "Validacion Obligatoria")]
+        [DataType(DataType.Password)]
+        [Compare("Clave",ErrorMessage = "Validacion Incorrecta")]
         public string ValidaClave { get; set; }
 
         [Required(ErrorMessage = "Tipo Obligatorio")]
