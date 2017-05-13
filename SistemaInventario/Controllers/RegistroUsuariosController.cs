@@ -47,7 +47,7 @@ namespace SistemaInventario.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UsuarioID,Nombre,Clave,Tipo,Fecha")] RegistroUsuario registroUsuario)
+        public ActionResult Create([Bind(Include = "UsuarioID,Nombre,Apellido,Telefono,Clave,ValidaClave,Tipo,Fecha")] RegistroUsuario registroUsuario)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace SistemaInventario.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UsuarioID,Nombre,Clave,Tipo,Fecha")] RegistroUsuario registroUsuario)
+        public ActionResult Edit([Bind(Include = "UsuarioID,Nombre,Apellido,Telefono,Clave,ValidaClave,Tipo,Fecha")] RegistroUsuario registroUsuario)
         {
             if (ModelState.IsValid)
             {
